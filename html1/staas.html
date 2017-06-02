@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>CloudX</title>
+<link rel="stylesheet" type="text/css" media="all" href="style.css">  
+<body>
+<section id="container">
+	<h2>Storage As A Service</h2>
+	<form name="hongkiat" id="hongkiat-form" method="post"  action="/cgi-bin/staas.py">
+		<div id="wrapping" class="clearfix">
+		<section id="aligned">
+			<span class="radiobadge">
+				<input type="radio" id="low" name="x" value="1">
+				<label for="low">OBJECT STORAGE- THROUGH NFS</label>
+			</span>
+			<span class="radiobadge">
+				<input type="radio" id="med" name="x" value="2">
+				<label for="med">BLOCK STORAGE-THROUGH SSHFS</label>
+			</span>
+			<!--<span class="radiobadge">
+				<input type="radio" id="high" name="x" value="3">
+				<label for="high">BLOCK STORAGE-THROUGH ISCSI</label>
+			</span>
+			<span class="radiobadge">
+				<input type="radio" id="high" name="x" value="4">
+				<label for="high">CIFS/SMB STORAGE (for windows also)</label>
+			</span>-->
+			<input type="textl" name="hd"  placeholder="Enter storage size in GB" tabindex="4" class="txtinput" required>
+			<input type="text" name="usr"  placeholder="Enter account user name" tabindex="4" class="txtinput" required>
+            		<input type="password" name="passwd"  placeholder="Enter password" tabindex="4" class="txtinput" required>
+			<section id="buttons">
+				<input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset">
+				<input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Submit">
+				<br style="clear:both;">
+		</section>
+		</div>
+	</form>
+
+
+
+	<!--<h2>Take snapshot of Storage</h2>
+	<form name="hongkiat" id="hongkiat-form" method="post"  action="/cgi-bin/snap.py">
+		<div id="wrapping" class="clearfix">
+		<section id="aligned">
+				<input type="text" name="usr"  placeholder="Enter user name" tabindex="4" class="txtinput" required>
+	            		<input type="password" name="passwd"  placeholder="Enter password" tabindex="4" class="txtinput" required>
+			
+				<section id="buttons">
+				<input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Take Snap !">
+				
+		</section>
+		</div>
+	</form>-->
+
+
+	<h2>Extend Storage</h2>
+	<form name="hongkiat" id="hongkiat-form" method="post"  action="/cgi-bin/extend.py">
+		<div id="wrapping" class="clearfix">
+		<section id="aligned">
+			<span class="radiobadge">
+				<input type="radio" id="low" name="e" value="1">
+				<label for="low">EXTEND STORAGE </label>
+			</span>
+			<!--<span class="radiobadge">
+				<input type="radio" id="med" name="e" value="2">
+				<label for="med">REDUCE STORAGE</label>-->
+			<input type="text" name="usr"  placeholder="Enter user name" tabindex="4" class="txtinput" required>
+            		<input type="password" name="passwd"  placeholder="Enter password" tabindex="4" class="txtinput" required>
+			
+			<input type="textl" name="ex"  placeholder="Enter Extend storage size in GB" tabindex="4" class="txtinput" required>
+			<section id="buttons">
+				<input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset">
+				<input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Extend">
+				<br style="clear:both;">
+		</section>
+		</div>
+	</form>
+</section>
+</body>
+</html>
